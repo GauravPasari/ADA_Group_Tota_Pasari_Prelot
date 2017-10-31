@@ -54,8 +54,8 @@ Timeplan up until project milestone 2
 * End January: End of project and final submission of all deliverables
 
 # Questions for TAs
-Is the twitter dataset available? If yes which is its format? 
-Do we have access to News On the Web without paying? https://www.corpusdata.org/purchase.asp
-Is the project too broad? 
+* Is the twitter dataset available? If yes which is its format? 
+* Do we have access to News On the Web without paying? https://www.corpusdata.org/purchase.asp
+* Is the project too broad? 
 
 
