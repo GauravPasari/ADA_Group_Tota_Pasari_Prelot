@@ -6,9 +6,9 @@ Recent geopolitical events such as the election of Trump and Brexit have, to say
 
 # Research questions
 To better dissect the data and extract insights, we explore the following questions:
-1- Which socio-economic factors have the biggest impact, if any, in building or altering popular opinion?
-* Standard and Quality of Education (Wikidata, Educational databases)
-* Income and Inequality Levels (Wikidata)
+* Which socio-economic factors have the biggest impact, if any, in building or altering popular opinion?
+** Standard and Quality of Education (Wikidata, Educational databases)
+** Income and Inequality Levels (Wikidata)
 2- How does media through newspapers and social networks influence these events through information or misinformation?
     * Newspaper (Corpus Data)
     * Social Media (Twitter)
