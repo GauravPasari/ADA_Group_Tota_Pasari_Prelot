@@ -31,6 +31,7 @@ Data Constraints:
 To study Brexit, US election and Catalonian independence we need to make sure that
    * We can have access to media information in english, spanish or catalan
    * We can access data recent enough. 
+   
 The News On the Web data set offers the  NOW data set ((Currently) 5.26 billion words | 6,000,000 texts | web pages | 20 different countries | Growing by 4-5 million words each day.) This data set will be up to date, but it will cover mostly blog articles. The  “Corpus del Español” ( (Web/Dialects): 1.8 billion words | 1,800,000 texts | web pages | ~ 60% blogs | 21 Spanish-speaking countries ). This dataset would be suitable for extended research on Catalonia.  The GloWbE: (1.8 billion words | 1,800,000 texts | web pages | ~ 60% blogs | United States, Great Britain, Australia, India, and 16 other countries) This data set could be used to study Brexit and trump election. The COCA: 440 million words | 190,000 texts | 1990-2012 | evenly divided (~88 million words each) into spoken, fiction, magazine, newspaper, academic) is more structured, but does not offer data after 2012. 
 
 
