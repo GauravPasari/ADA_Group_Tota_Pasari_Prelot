@@ -1,5 +1,8 @@
 ## Question for Milestone 2
-Would it be possible to have access to the corpus of del Español? We would need the latter in order to worl on Catalan independence
+Would it be possible to have access to the corpus of del Español? We would need the latter in order to work on Catalan independence.
+
+----
+----
 
 # Title
 Prediction in an Era of Unpredictability 
