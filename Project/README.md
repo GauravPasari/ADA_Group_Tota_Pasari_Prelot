@@ -1,3 +1,6 @@
+## Question for Milestone 2
+Would it be possible to have access to the corpus of del Español? We would need the latter in order to worl on Catalan independence
+
 # Title
 Prediction in an Era of Unpredictability 
 
@@ -59,9 +62,5 @@ Timeplan up until project milestone 2
 * Mid January: Poster completion
 * End January: End of project and final submission of all deliverables
 
-# Questions for TAs
-* Is the twitter dataset available? If so, what is its format? 
-* Is the project too broad?
-* How can we access the Corpus data for Spanish newspapers?
 
 
