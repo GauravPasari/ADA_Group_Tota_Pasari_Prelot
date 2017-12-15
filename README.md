@@ -2,5 +2,5 @@
 
 ## Team Members:
 * [Laurie Prélot](laurie.prelot@epfl.ch)
-* [Gaurav Pasari](gaurav.pasari@epfl.ch)
+* [Gaurav Pasari](https://www.github.com/gauravpasari)
 * [Karunya Tota](karunya.tota@epfl.ch)
