@@ -14,9 +14,12 @@ To better dissect the data and extract insights, we explore the following questi
 
 
 # Dataset
-News On the Web - https://www.corpusdata.org/intro.asp
-</br>
-The News On the Web ((Currently) 5.26 billion words | 6,000,000 texts | web pages | 20 different countries | Growing by 4-5 million words each day).
+News On the Web
+* https://www.corpusdata.org/intro.asp
+* 5.26 billion words
+* 6,000,000 texts and web pages
+* 20 different countries
+* Growing by 4-5 million words per day
 
 
 # Feasibility: 
