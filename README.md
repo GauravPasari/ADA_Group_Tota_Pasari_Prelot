@@ -1,6 +1,6 @@
 # ADA_Group_Tota_Pasari_Prelot
 
 ## Team Members:
-* [Laurie Prélot](laurie.prelot@epfl.ch)
+* [Laurie Prélot](https://www.github.com/lprelot)
 * [Gaurav Pasari](https://www.github.com/gauravpasari)
-* [Karunya Tota](karunya.tota@epfl.ch)
+* [Karunya Tota](https://www.github.com/karunyatota)
