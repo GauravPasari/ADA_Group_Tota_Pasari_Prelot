@@ -273,6 +273,7 @@ pre {
 .visualizations {
   position: relative;
   padding-bottom: 56.25;
+  margin-left: 5%;
   padding-top: 25px;
   height: 0;
 }
@@ -281,8 +282,8 @@ pre {
   position: absolute;
   top: 100;
   left: 50px;
-  width: 1100px;
-  height: 670px;
+  width: 85%;
+  height: 500px;
 }
 
 /**
