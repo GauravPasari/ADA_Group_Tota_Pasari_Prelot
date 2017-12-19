@@ -1,0 +1,47 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+.visualizations {
+  position: relative;
+  height: 0;
+  padding-bottom: 75%;
+}
+
+.visualizations iframe {
+  position: absolute;
+  margin: 0 auto;
+  display: block;
+}
+
+#candidates iframe {
+  left: -15%;
+  width: 1000px;
+  height: 530px;
+}
+
+#words iframe {
+  left: -2%;
+  width: 1000px;
+  height: 950px;
+
+  -ms-zoom: 0.75;
+  -moz-transform: scale(0.75);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.75);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.75);
+  -webkit-transform-origin: 0 0;
+}
+
+.header-block {
+  margin-top: 25%;
+}
+
+#timeseries iframe {
+  left: -15%;
+  width: 1000px;
+  height: 530px;
+}
