@@ -272,18 +272,44 @@ pre {
 
 .visualizations {
   position: relative;
-  padding-bottom: 56.25;
-  margin-left: 5%;
-  padding-top: 25px;
   height: 0;
+  padding-bottom: 75%;
 }
 
-.visualizations, iframe {
+.visualizations iframe {
   position: absolute;
-  top: 100;
-  left: 50px;
-  width: 85%;
-  height: 500px;
+  margin: 0 auto;
+  display: block;
+}
+
+#candidates iframe {
+  left: -15%;
+  width: 1000px;
+  height: 530px;
+}
+
+#words iframe {
+  left: -2%;
+  width: 1000px;
+  height: 950px;
+
+  -ms-zoom: 0.75;
+  -moz-transform: scale(0.75);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.75);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.75);
+  -webkit-transform-origin: 0 0;
+}
+
+.header-block {
+  margin-top: 25%;
+}
+
+#timeseries iframe {
+  left: -15%;
+  width: 1000px;
+  height: 530px;
 }
 
 /**
