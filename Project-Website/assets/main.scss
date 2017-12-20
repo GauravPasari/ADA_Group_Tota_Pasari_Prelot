@@ -29,6 +29,13 @@
   height: 530px;
 }
 
+#election_words iframe {
+  margin-top: 100px;
+  left: -17%;
+  width: 1000px;
+  height: 600px;
+}
+
 #words iframe {
   left: -2%;
   width: 1000px;
@@ -40,6 +47,35 @@
   -o-transform: scale(0.75);
   -o-transform-origin: 0 0;
   -webkit-transform: scale(0.75);
+  -webkit-transform-origin: 0 0;
+}
+
+#bars1 iframe {
+  left: 10%;
+  width: 1000px;
+  height: 990px;
+
+  -ms-zoom: 0.60;
+  -moz-transform: scale(0.60);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.60);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.60);
+  -webkit-transform-origin: 0 0;
+}
+
+#bars2 iframe {
+  margin-top: 50px;
+  left: 10%;
+  width: 1000px;
+  height: 990px;
+
+  -ms-zoom: 0.60;
+  -moz-transform: scale(0.60);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.60);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.60);
   -webkit-transform-origin: 0 0;
 }
 
@@ -61,6 +97,14 @@ h3, h4 {
   font-weight: 900;
 }
 
-#offset {
+#offset1 {
+  margin-top: 180px;
+}
+
+#offset2 {
   margin-top: 200px;
+}
+
+.footer-col-wrapper p {
+  text-align: left;
 }

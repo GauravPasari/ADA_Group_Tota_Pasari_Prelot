@@ -8,7 +8,7 @@ layout: default
 
   <h3>Introduction</h3>
   <p>
-    The goal of the project was to analyze the 2016 U.S. Elections newspaper data and determine:
+    The goal of our project was to analyze the 2016 U.S. Elections newspaper data and determine:
   </p>
   <ol>
     <li>How does media through newspapers (both paper and digital) influence these events through information or misinformation?
@@ -21,11 +21,11 @@ layout: default
 
 
   <p>
-    Our dataset of choice was <a href="https://www.corpusdata.org/">the Corpus Data.</a> It contains newspapers from various countries, multiple news sources, and over a period of 200 years.
+    Our dataset of choice was <a href="https://www.corpusdata.org/">the Corpus Data.</a> It contains newspapers from various countries and tons of news sources over a period of 200 years!
   </p>
 
   <p>
-    For our analysis, we focus on the election season which falls in the period between January 2015 to October 2016. Over the period of 22 months, we found 32,139 articles from 7486 unique news sources.
+    For our analysis, we focused on the election season which falls between January 2015 to October 2016. Over this period of 22 months, we found 32,139 articles from 7486 unique news sources.
   </p>
 
 <!-- -------------------------------------------------------------------------------- -->
@@ -36,7 +36,7 @@ layout: default
   </p>
 
   <p>
-    Our idea was to make a list of the major Presidential candidates and see how they trend within the newspapers every month through the election cycle. Our analysis is plotted below as a heatmap which clearly shows which candidate received more coverage than the other.
+    Our idea was to make a list of the major Presidential candidates and see how they trend within the newspapers every month through the election cycle. Our analysis is plotted below as a heatmap that clearly shows which candidate received more coverage another.
   </p>
 
   <center>
@@ -48,7 +48,7 @@ layout: default
   </div>
 
   <p>
-    The transition from dark blue to light blue boxes during 2015 can be used to ascertain when each candidate announced their candidacy. Toward the end of 2016, we see dark blue boxes for the majority of the candidates as they dropped out of the primary race and were less talked about. However, it is still interesting to notice how one primary party candidate received significantly more coverage than the other toward the end of the election cycle, due to the controversial news which turned into fodder for entertainment.
+    The transition from dark blue to light blue boxes during 2015 can be used to ascertain when each candidate announced their candidacy. Toward the end of 2016, we see dark blue boxes for the majority of the candidates as they dropped out of the primary race and were less talked about. However, it is still interesting to notice how one primary party candidate received significantly more coverage than the other toward the end of the election cycle, due to the <a href="https://en.wikipedia.org/wiki/Donald_Trump_Access_Hollywood_tape">controversial news</a> which turned into fodder for entertainment.
   </p>
 
   <center>
@@ -60,7 +60,7 @@ layout: default
   </div>
 
   <p>
-    Finally, we can look at the approval poll ratings from the entire season for Donald Trump and Hillary Clinton. The grey area can be used to select an interval to zoom into and observe the trends in detail. 
+    Finally, we can take a look at the approval poll ratings from the entire season for Donald Trump and Hillary Clinton. The grey bar can be used to select an interval to <strong>zoom into and observe</strong> the trends in detail. In late 2015, both candidates are fairly close in public opinion. However, the divide starts to happen in 2016 with unprecedented events and news.
   </p>
 
 <!-- -------------------------------------------------------------------------------- -->
@@ -72,21 +72,48 @@ layout: default
 
   <p>
     Our goal was to find the bias in newspapers and see how it affects its readership. The steps were as follows:
+    <ol>
+      <li>
+      Create a training set by finding the newspapers with the highest number of articles in the dataset and adding labels for them. For this step, we used <a href="https://www.allsides.com/media-bias/media-bias-ratings">online crowdsourced</a> results to find the labels ranging from -2 to +2 where -2 represents a left-leaning perspective and +2 is right-leaning. We used BeautifulSoup to scrape data from the website and merged the labels with each news source in our dataset.
+      </li>
+      <li>
+      Train a model or an algorithm of choice using this large set of articles and their corresponding labels. We used Facebook's <a href="https://github.com/facebookresearch/fastText">FastText</a> algorithm which analyzes a large text file of data and predicts biases in the text.
+      </li>
+      <li>
+      Predict the accuracy for the model by punching holes in the training set and checking results for it. We achieved an accuracy of 36% initially which was worse than a random assignment of labels.
+      </li>
+      <li>
+      Refine the model until we get the best accuracy possible and find labels for the test set comprising of articles from the remaining sources. We realized that the training dataset was largely imbalanced with many articles from left-leaning newspapers compared to right-leaning. Moreover, the manually added labels only covered 24% of all the articles in our dataset for the election season timeframe. In order to fix these problems, we used another resource to add more labels and increase article coverage from 24% to 40%. Furthermore, we experimented with different labeling scales:
+       <ul>
+        <li>Left and Right</li>
+        <li>Left, Center, and Right</li>
+        <li>Left, Combined (Left-Leaning, Center, Right-Leaning as a single label), and Right</li>
+        <li>Left, Left-Leaning, Center, Right-Leaning, and Right</li>
+      </ul>
+
+      Adding these two changes improved our model accuracy from 36% to around 76%. This was a significant change and even though it is not near perfect, media bias is a difficult problem especially with the limited resources in terms of the diversification of the dataset and the algorithms for sentiment analysis.
+      </li>
     <br>
-    1. Create a training set by finding the newspapers with the highest number of articles in the dataset and adding labels for them. For this step, we used online crowdsourced results to find the labels (from -2 to +2 where -2 is left-leaning and +2 is right-leaning). We used BeautifulSoup for scraping data from the website and merged the labels with the name of newspaper sources in our dataset.
-    <br>
-    2. Train a model or an algorithm of choice using this large set of articles and their labels. We used Facebook's FastText algorithm which analyzes large text of data and predicts biases in the text.
-    <br>
-    3. Predict the accuracy for the model by punching holes in the training set and checking results for it. We achieved an accuracy of 36% initially which was worse than a random assignment of labels.
-    <br>
-    4. Refind model until we get the best accuracy possible and find labels for the test set comprising of articles from the remaining sources. We realized that the training dataset was largely imbalanced with many articles from left-leaning newspapers as compared to right-leaning. Moreover, the manually added labels only covered 24% of all the articles in our dataset for the election season timeframe. We used another website to add labels and increased article coverage from 24% to 40%. Adding these two changes improved our model accuracy from 36% to around 76%. This was a significant change and even though it is not near perfect, media bias is a hard problem especially with the limited resources in terms of the diversification of the dataset and the algorithms for sentiment analysis.
-    <br>
+    </ol>
+
+    <div class="visualizations" id="bars1">
+      <iframe src="../viz/Stacked_Bar_2Labels.html"></iframe>
+    </div>
+
+<!--     <div class="visualizations" id="bars2">
+      <iframe src="../viz/Stacked_Bar_5Labels.html"></iframe>
+    </div> -->
+
+    <div class="visualizations" id="election_words">
+      <iframe src="../viz/Election-Relatedwords.html"></iframe>
+    </div>
+
   </p>
 
 
 <!-- -------------------------------------------------------------------------------- -->
 
-  <h3>Question 3</h3>
+  <h3 id="offset1">Question 3</h3>
   <p>
     Our last question was to recognize any patterns in the ideas, opinions, and sentiments spread by the media and to see how far back we could have traced such patterns. 
   </p>
@@ -103,21 +130,24 @@ layout: default
     <iframe src="../viz/HeatMap_Word_per_Date.html"></iframe>
   </div>
 
-  <p id="offset">
+  <p id="offset2">
     We observe some interesting visuals here:
     <ol>
-      <li> Notice the spike in the usage of the word "police" in July 2016 which is most likely due to the shooting of police officers in Dallas on July 7 which killed 5 officers and injured 9 more.
+      <li> Notice the spike in the usage of the word "police" in July 2016 which is most likely due to the <a href="https://en.wikipedia.org/wiki/2016_shooting_of_Dallas_police_officers">shooting of police officers in Dallas</a> on July 7 which killed 5 officers and injured 9 more.
       </li>
       <li>
-      The spike in the usage of the word "muslim" in December 2015 is timed with Donald Trump's call for a complete shutdown of Muslim people entering the United States.
+      The spike in the usage of the word "muslim" in December 2015 is timed with Donald Trump's call for a <a href="http://time.com/4139476/donald-trump-shutdown-muslim-immigration/">complete shutdown of Muslim people entering the United States</a>.
       </li>
       <li>
-      The use of the word woman sees a spike in April 2015 as Hillary Clinton announces her candidacy and the American people discuss their first potential female President.
+      The use of the word woman sees a spike in April 2015 as <a href="https://www.nytimes.com/2015/04/13/us/politics/hillary-clinton-2016-presidential-campaign.html">Hillary Clinton announces her candidacy</a> and the American people discuss their first potential female President.
+      </li>
+      <li>
+        The term "obama" is popular in January 2016 when he signs an executive order on gun control and delivers his final State of Union Address. 
+      </li>
+      <li>
+        Two prominent mass shooting events explain the trending of the word "gun" during October 2015 with the Oregon College shooting and June 2016 <a href="https://en.wikipedia.org/wiki/Orlando_nightclub_shooting"> when the devastating Orlando Nightclub shooting</a> occurred.
       </li>
     </ol>
-  </p>
-
-  <p>
   </p>
 
 </div>
