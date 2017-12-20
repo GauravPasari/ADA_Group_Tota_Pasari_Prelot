@@ -1,8 +1,7 @@
-# Title
-Prediction in an Era of Unpredictability
+# Prediction in an Era of Unpredictability
 
-# [Project Notebook](https://github.com/GauravPasari/ADA_Group_Tota_Pasari_Prelot/tree/master/Project-Code)
-# [Project Website Here](https://elections.aerobatic.io/)
+## [Project Notebook](https://github.com/GauravPasari/ADA_Group_Tota_Pasari_Prelot/tree/master/Project-Code)
+## [Project Website Here](https://elections.aerobatic.io/)
 
 ## Abstract
 Recent geopolitical events such as the Election of Trump, Brexit, and Catalonian Independence have, to say the least, shocked the popular opinion around the globe. Media outlets, political experts, advisors, and data scientists have all failed to come close to predicting the outcome of such events. In hindsight, however, some of the pieces are obvious to connect. Our goal is to analyze the given data on the basis of common ideas and popular opinion and see how the former squashed the latter. Any insights can improve our chances of predicting future events such as the current state of Catalonia. Are there specific factors which largely shape such seemingly sudden political ‘bursts’ and their outcomes or is it solely the product of erratic human behavior? In this project, we will focus on learning from the US Presidential Elections of 2016.
