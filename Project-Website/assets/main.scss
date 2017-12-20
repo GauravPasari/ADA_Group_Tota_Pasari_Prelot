@@ -43,16 +43,24 @@
   -webkit-transform-origin: 0 0;
 }
 
-h3 {
+h3, p, li {
   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+li {
+  margin-right: 20px;
+}
+
+h4 {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+h3, h4 {
   font-weight: 900;
 }
 
-h3 {
-  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
-  font-weight: 600;
-}
-
-p {
-  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+#offset {
+  margin-top: 200px;
 }
