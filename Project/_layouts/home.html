@@ -6,31 +6,113 @@ layout: default
 
   {{ content }}
 
+  <h3>Introduction</h3>
+  <p>
+    The goal of the project was to analyze the 2016 U.S. Elections newspaper data and determine:
+    <br>
+    1. How does media through newspapers (both paper and digital) influence these events through information or misinformation?
+    <br>
+    2. Is it possible to find the political bias (left, right, or center) of newspapers using existing data and data analysis?
+    <br>
+    3. How far in time could we have traced the roots of such events and opinions using time series?
+    <br>
+  </p>
+
+  <p>
+    Our dataset of choice was <a href="https://www.corpusdata.org/">the Corpus Data.</a> It contains newspapers from various countries, multiple news sources, and over a period of 200 years.
+  </p>
+
+  <p>
+    For our analysis, we focus on the election season which falls in the period between January 2015 to October 2016. Over the period of 22 months, we found 32,139 articles from 7486 unique news sources.
+  </p>
+
+<!-- -------------------------------------------------------------------------------- -->
+
+  <h3>Question 1</h3>
+  <p>
+    There is no doubt that newspapers and media sources (both online and paper) largely influenced the political opinion across the globe. Most newspapers officially stated their regrets for emphasizing more on certain candidates while covering less of the others, thus creating an information and coverage bias.
+  </p>
+
+  <p>
+    Our idea was to make a list of the major Presidential candidates and see how they trend within the newspapers every month through the election cycle. Our analysis is plotted below as a heatmap which clearly shows which candidate received more coverage than the other.
+  </p>
+
   <center>
-    <h3>How popular are the major candidates across all the newspapers?</h3>
+    <h4>How popular are the major candidates across all the newspapers?</h4>
   </center>
 
   <div class="visualizations" id="candidates">
     <iframe src="../viz/HeatMap_Candidate_per_Date.html"></iframe>
   </div>
 
+  <p>
+    The transition from dark blue to light blue boxes during 2015 can be used to ascertain when each candidate announced their candidacy. Toward the end of 2016, we see dark blue boxes for the majority of the candidates as they dropped out of the primary race and were less talked about. However, it is still interesting to notice how one primary party candidate received significantly more coverage than the other toward the end of the election cycle, due to the controversial news which turned into fodder for entertainment.
+  </p>
+
   <center>
-    <h3>Which are the trending words during the election season?</h3>
-  </center>
-
-  <div class="visualizations" id="words">
-    <iframe src="../viz/HeatMap_Word_per_Date.html"></iframe>
-  </div>
-
-  <center class="header-block">
-    <h3>Which words are popular among newspapers during the U.S. 2016 Election?</h3>
+    <h4>What are the approval poll results during the election season?</h4>
   </center>
 
   <div class="visualizations" id="timeseries">
     <iframe src="../viz/TimeSeries.html"></iframe>
   </div>
 
+  <p>
+    Finally, we can look at the approval poll ratings from the entire season for Donald Trump and Hillary Clinton. The grey area can be used to select an interval to zoom into and observe the trends in detail. 
+  </p>
+
+<!-- -------------------------------------------------------------------------------- -->
+
+  <h3>Question 2</h3>
+  <p>
+    Media organizations are run by a group of individuals sharing beliefs and opinions largely based on some common bias. As such, each newspaper has a left (more liberal and leaning toward the Democractic party), right (more conservative and leaning toward the Republican party), or center bias (independent). To go one step further, we can also categorize newspapers into left-center or right-center groups. 
+  </p>
+
+  <p>
+    Our goal was to find the bias in newspapers and see how it affects its readership. The steps were as follows:
+    <br>
+    1. Create a training set by finding the newspapers with the highest number of articles in the dataset and adding labels for them. For this step, we used online crowdsourced results to find the labels (from -2 to +2 where -2 is left-leaning and +2 is right-leaning). We used BeautifulSoup for scraping data from the website and merged the labels with the name of newspaper sources in our dataset.
+    <br>
+    2. Train a model or an algorithm of choice using this large set of articles and their labels. We used Facebook's FastText algorithm which analyzes large text of data and predicts biases in the text.
+    <br>
+    3. Predict the accuracy for the model by punching holes in the training set and checking results for it. We achieved an accuracy of 36% initially which was worse than a random assignment of labels.
+    <br>
+    4. Refind model until we get the best accuracy possible and find labels for the test set comprising of articles from the remaining sources. We realized that the training dataset was largely imbalanced with many articles from left-leaning newspapers as compared to right-leaning. Moreover, the manually added labels only covered 24% of all the articles in our dataset for the election season timeframe. We used another website to add labels and increased article coverage from 24% to 40%. Adding these two changes improved our model accuracy from 36% to around 76%. This was a significant change and even though it is not near perfect, media bias is a hard problem especially with the limited resources in terms of the diversification of the dataset and the algorithms for sentiment analysis.
+    <br>
+  </p>
 
 
+<!-- -------------------------------------------------------------------------------- -->
+
+  <h3>Question 3</h3>
+  <p>
+    Our last question was to recognize any patterns in the ideas, opinions, and sentiments spread by the media and to see how far back we could have traced such patterns. 
+  </p>
+
+  <p>
+    To answer this question, we analyzed the entire corpus dataset for our election timeframe and found the most important words. We used TF-IDF (Term Frequency - Inverse Document Frequency) which finds the most important words i.e. those words which are high in frequency in a particular document group but lower in frequency across all the document groups in the corpus. If a term has extremely high frequency throughout all the document groups in the corpus, the TF-IDF importance is reduced since it is most likely to be a common word of relatively lower significance. Using this, we found the top 50 words relevant to the election cycle and plotted their trends across the entire election cycle below.
+  </p>
+
+  <center>
+    <h4>Which words are trending across the newspapers during the U.S. 2016 Election?</h4>
+  </center>
+
+  <div class="visualizations" id="words">
+    <iframe src="../viz/HeatMap_Word_per_Date.html"></iframe>
+  </div>
+
+  <p>
+    We observe some interesting visuals here:
+    <br>
+    1. Notice the spike in the usage of the word "police" in July 2016 which is most likely due to the shooting of police officers in Dallas on July 7 which killed 5 officers and injured 9 more.
+    <br>
+    2. The spike in the usage of the word "muslim" in December 2015 is timed with Donald Trump's call for a complete shutdown of Muslim people entering the United States.
+    <br>
+    3. The use of the word woman sees a spike in April 2015 as Hillary Clinton announces her candidacy and the American people discuss their first potential female President.
+    <br>
+  </p>
+
+  <p>
+  </p>
 
 </div>

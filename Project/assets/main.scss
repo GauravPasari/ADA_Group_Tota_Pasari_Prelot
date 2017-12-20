@@ -6,7 +6,8 @@
 
 .visualizations {
   position: relative;
-  height: 0;
+  height: 100%;
+  padding-top: 0%;
   padding-bottom: 75%;
 }
 
@@ -17,6 +18,12 @@
 }
 
 #candidates iframe {
+  left: -15%;
+  width: 1000px;
+  height: 530px;
+}
+
+#timeseries iframe {
   left: -15%;
   width: 1000px;
   height: 530px;
@@ -36,12 +43,16 @@
   -webkit-transform-origin: 0 0;
 }
 
-.header-block {
-  margin-top: 25%;
+h3 {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  font-weight: 900;
 }
 
-#timeseries iframe {
-  left: -15%;
-  width: 1000px;
-  height: 530px;
+h3 {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  font-weight: 600;
+}
+
+p {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
